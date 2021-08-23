@@ -24,16 +24,16 @@ spec:
         - server
         - /storage
         env:
-        - name: MINIO_ACCESS_KEY
+        - name: MINIO_ROOT_NAME
           valueFrom:
             secretKeyRef:
               name: minio
-              key: MINIO_ACCESS_KEY
-        - name: MINIO_SECRET_KEY
+              key: MINIO_ROOT_NAME
+        - name: MINIO_ROOT_PASSWORD
           valueFrom:
             secretKeyRef:
               name: minio
-              key: MINIO_SECRET_KEY
+              key: MINIO_ROOT_PASSWORD
         ports:
         - containerPort: 9000
           hostPort: 9000

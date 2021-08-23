@@ -4,10 +4,10 @@ metadata:
   name: minio-pvc
   labels:
     app: minio-pvc
-  spec:
-    accessModes: 
-    - ReadWriteOnce
-    storageClassName: local-storage
-    resources:
-      requests:
-        storage: 50Gi
+spec:
+  accessModes: 
+  - ReadWriteOnce
+  storageClassName: local-storage
+  resources:
+    requests:
+      storage: 50Gi

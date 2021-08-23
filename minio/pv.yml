@@ -6,16 +6,7 @@ spec:
   capacity:
     storage: 50Gi
   accessModes:
-  - ReadWriteOnce
+  - ReadWriteMany
   persistentVolumeReclaimPolicy: Retain
-  storageClassName: local-storage
-  local:
+  hostPath:
     path: <HOST_PATH>
-  nodeAffinity:
-    required:
-      nodeSelectorTerms:
-      - matchExpressions:
-        - key: kubernetes.io/hostname
-          operator: In
-          values:
-          - <NODE_NAME>
